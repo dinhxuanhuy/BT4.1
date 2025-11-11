@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey - Murach</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="Murach_image.jpg" alt="Murach Logo" class="logo">
+        </header>
+
+        <form action="submit_info" method="post">
+            <section class="survey-intro">
+                <h1>Survey</h1>
+                <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+            </section>
+
+            <section class="personal-info">
+                <h2>Your Information</h2>
+
+                <fieldset>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstName" placeholder="Enter your first name" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastName" placeholder="Enter your last name" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                </fieldset>
+            </section>
+
+            <section class="survey-questions">
+                <h2>How did you hear about us?</h2>
+                <fieldset>
+                    <label>
+                        <input type="radio" name="hearAboutUs" value="Search Engine" required>
+                        Search Engine
+                    </label>
+                    <label>
+                        <input type="radio" name="hearAboutUs" value="Social Media" required>
+                        Social Media
+                    </label>
+                    <label>
+                        <input type="radio" name="hearAboutUs" value="Friend" required>
+                        Friend
+                    </label>
+                    <label>
+                        <input type="radio" name="hearAboutUs" value="Other" required>
+                        Other
+                    </label>
+                </fieldset>
+            </section>
+
+            <section class="preferences">
+                <h2>Would you like to receive announcements about new CDs and special offers?</h2>
+                <fieldset class="checkbox-field">
+                    <input type="checkbox" id="receiveAnnouncements" name="receiveAnnouncements" value="true">
+                    <label for="receiveAnnouncements">Yes, I'd love to</label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="communicationMethod">Select your preferred method of communication</label>
+                    <select id="communicationMethod" name="communicationMethod" required>
+                        <option value="">-- Please select --</option>
+                        <option value="email">Email</option>
+                        <option value="postmail">Post Mail</option>
+                    </select>
+                </fieldset>
+            </section>
+
+            <footer>
+                <input type="submit" value="Submit Survey">
+            </footer>
+        </form>
+    </main>
+</body>
+</html>
